@@ -1,7 +1,12 @@
-n = int(input("quantos termos da sequência de Fibonacci voce quer?"))
-a, b = 0, 1
+n = input("Quantos termos da sequência de Fibonacci você quer? ")
 
-print("sua sequeência é")
-for i in range(n):
-    print(a, end=' ')
-    a, b = b, a + b
+if n.isdigit():
+    n = int(n)
+    a, b = 0, 1
+
+    print("Sua sequência é:")
+    for i in range(n):
+        print(a, end=' ')
+        a, b = b, a + b
+else:
+    print("INVALIDO")
