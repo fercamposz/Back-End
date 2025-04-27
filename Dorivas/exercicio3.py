@@ -1,4 +1,8 @@
-num = int(input("Digite o seu numero:"))
+num = input("Digite o seu número: ")
 
-for i in range (1,11):
-    print(f"{num} x {i} = {num*i}")
+if num.isdigit():
+    num = int(num)
+    for i in range(1, 11):
+        print(f"{num} x {i} = {num*i}")
+else:
+    print("INVALIDO")
