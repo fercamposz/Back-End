@@ -1,3 +1,4 @@
+#poli
 class pessoas:
     def __init__ (self, nomes):
         self.nomes = nomes
@@ -20,3 +21,27 @@ fer.oi()
 
 dorival = Professor("Dorivas")
 dorival.oi()
+
+#herança
+class Pessoa:
+    def __init__(self, nome):
+        self.nome = nome
+
+    def apresentar(self):
+        print(f"Olá, meu nome é {self.nome}.")
+
+class Aluna(Pessoa):
+    def __init__(self, nome):
+        super().__init__(nome)
+
+class Professor(Pessoa):
+    def __init__(self, nome):
+        super().__init__(nome)
+marcia = Pessoa("Marcia")
+marcia.apresentar()
+
+fernanda = Aluna("Fernanda")
+fernanda.apresentar()
+
+dorival = Professor("Dorival")
+dorival.apresentar()
